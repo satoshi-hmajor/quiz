@@ -46,6 +46,25 @@
   </div>
  </div>
   <script src="app.js"></script>
+  <div id="disp">↓ここをクリックで全答案が見れます</div>
+
+  <form>
+  <input type="button" id="kaito" value="答案" onclick="hyoji1(0)">
+  </form>
+  
+  <script>
+  
+  function hyoji1(num)
+  {
+    if (num == 0)
+    {
+      document.getElementById("disp").style.display="block";
+      location.href = "https://docs.google.com/document/d/1BD0MsMY-cyNbU-DiErLLDtY4TODhcKadokbjJLYa3Y0/edit?usp=sharing";
+    }
+  }
+  
+  </script>
+
 </body>
 
 </html>
