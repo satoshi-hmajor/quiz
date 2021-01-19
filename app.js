@@ -32,9 +32,9 @@ const quiz = [
       answers: [ '電流', '電圧', '電力', 'ウサイン'],
       correct: '電圧'
     }, {
-      question: '【問9】Maroon5のヴォーカルは？',
-      answers: [ 'リアム・ギャラガー', 'クリス・マーティン', 'アダム・レヴィーン', 'アンソニー・キーディス'],
-      correct: 'アダム・レヴィーン'
+      question: '【問9】音の大きさ"110db"はどのくらいの音？',
+      answers: [ '電車の車内', '普通の会話', '車のクラクション', '図書館'],
+      correct: '車のクラクション'
     }, {
       question: '【最終問題】サウンドハウスのプライベートブランドは？',
       answers: [ 'タスカム', 'マランツ', 'ラムサ', 'クラシックプロ'],
@@ -63,9 +63,11 @@ const quiz = [
     const buttonLen = $buttons.length;
     let btnIndex = 0;
     
+    //ボタンの回答分を更新していく
     while(btnIndex < buttonLen){
       $buttons[btnIndex].textContent = quiz[quizCount].answers[btnIndex];
       btnIndex++;
+
     }
   };
   
@@ -89,13 +91,19 @@ const quiz = [
     }
     goToNext();
   };
+
   
   //最終画面-成績発表
   const showEnd = () => {
     $question.textContent = 'あなたのスコアは' + score + '/' + quizLen + 'です';
-
+    
     const $items = $doc.getElementById('js-items');
-    $items.style.visibility = 'hidden';
+    $items.textContent = 'お疲れさまでした！！';
+
+    document.getElementById("kaito").onclick = function() {
+      // ここに#buttonをクリックしたら発生させる処理を記述する
+      location.href = "https://docs.google.com/document/d/1BD0MsMY-cyNbU-DiErLLDtY4TODhcKadokbjJLYa3Y0/edit?usp=sharing";
+    };
 
     if (score === quizLen){
       $window.alert('素晴らしい!!'); 
