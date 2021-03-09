@@ -1,0 +1,64 @@
+.container {
+  width: 100%;
+  height: 40vw;
+  background-color: rgb(189, 214, 189);
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 680px) {
+    height: 140vw;
+    padding-top: 20px;
+  }
+}
+.title {
+  width: 50%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5vw auto 0px auto;
+  background-color: darkgreen;
+  color: white;
+  @media (max-width: 680px) {
+    width: 100%;
+    height: 60px;
+  }
+}
+.answer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 6vw;
+  @media (max-width: 680px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70%;
+  }
+}
+.m-2 {
+  width: 20vw;
+  @media (max-width: 680px) {
+    width: 70%;
+  }
+}
+.btn {
+  width: 100%;
+  font-size: 15px;
+  display: inline-block;
+  padding: 1em;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #fff;
+  background-image: linear-gradient(20deg, limegreen 60%, rgb(190, 236, 190) 100%);
+  transition: 0.4s;
+  box-shadow: 0px 5px 3px darkslategrey;
+}
+.btn:hover {
+  background-image: linear-gradient(20deg, rgb(9, 150, 9)80%, rgb(178, 236, 178) 100%);
+  cursor: pointer;
+}
+.btn:active {
+  box-shadow: none;
+  position: relative;
+  top: 5px;
+}
